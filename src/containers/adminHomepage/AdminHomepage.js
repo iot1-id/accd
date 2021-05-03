@@ -1,17 +1,18 @@
 import React from 'react'
 import Dashboard from "../dashboard/Dashboard";
+import NewRequests from './NewRequests';
 
-export default function Homepage() {
-     const topNavOptions = ["check status", "get certificates"];
-     const navigateTo = ["/userstatus", "/certificates"];
+export default function AdminHomepage() {
+    const topNavOptions = ["users", "certifiers"];
+    const navigateTo = ["/users", "/certifiers"];
     return (
       <div>
         <Dashboard
           topNavOptions={topNavOptions}
           navigateTo={navigateTo}
-          title="User Homepage"
+          title="Admin Homepage"
         >
-          landing page
+         <NewRequests/>
         </Dashboard>
       </div>
     );
