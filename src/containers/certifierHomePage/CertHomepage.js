@@ -1,5 +1,6 @@
 import React from 'react'
 import Dashboard from "../dashboard/Dashboard";
+import VerificationPage from "./VerificationPage";
 
 
 export default function CertHomepage() {
@@ -12,7 +13,7 @@ export default function CertHomepage() {
           navigateTo={navigateTo}
           title="Certifier Homepage"
         >
-          landing page
+          <VerificationPage />
         </Dashboard>
       </div>
     );

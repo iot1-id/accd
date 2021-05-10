@@ -12,6 +12,10 @@ import { AuthProvider } from "../../components/contexts/AuthContext";
 import { Container } from "react-bootstrap";
 import SignUp from "../../containers/auth/signup/Signup1";
 import SignIn from "../../containers/auth/login/login1";
+import Pricing from "../../containers/userHomepage/Pricing";
+import CheckStatus from "../../containers/userHomepage/CheckStatus";
+import CertStatus from "../../containers/certifierHomePage/CheckStatus";
+import Projects from "../../containers/certifierHomePage/Projects";
 
 const Main = (props) => {
   return (
@@ -25,6 +29,18 @@ const Main = (props) => {
         </Route>
         <Route path="/certifier">
           <CertHomepage />
+        </Route>
+        <Route path="/pricing">
+          <Pricing />
+        </Route>
+        <Route path="/status">
+          <CheckStatus />
+        </Route>
+        <Route path="/certstatus">
+          <CertStatus />
+        </Route>
+        <Route path="/certprojects">
+          <Projects/>
         </Route>
 
         <Route path="/signup" component={Signup} />

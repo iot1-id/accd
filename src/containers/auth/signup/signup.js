@@ -41,8 +41,8 @@ export default function Signup() {
             db.collection("users").doc(result.user.uid).set({
               createdAt: firebase.firestore.FieldValue.serverTimestamp(),
               uid: result.user.uid,
-            //   displayName: nameRef.current.value,
-              type: value,
+              displayName: nameRef.current.value,
+              role: value,
             });
           }
         );
@@ -65,10 +65,10 @@ export default function Signup() {
           <h2 className="text-center mb-4">Resgister with us</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
-            {/* <Form.Group id="Name">
+            <Form.Group id="Name">
               <Form.Label>Full Name</Form.Label>
               <Form.Control type="text" ref={nameRef} required />
-            </Form.Group> */}
+            </Form.Group>
             <Form.Group id="email">
               <Form.Label>Email</Form.Label>
               <Form.Control type="email" ref={emailRef} required />
